@@ -56,8 +56,8 @@ pair<int, int> meassureFitByX(vector<long long>& opcode, int x, int y) {
 }
 
 pair<int, int> findSpace(vector<long long>& opcode, int x, int y) {
-	int down = 1;
-	int right = 1;
+	int down = 0;
+	int right = 0;
 
 	while (isPulling(opcode, x, y)) {
 		++x;
@@ -123,25 +123,25 @@ int day19_2() {
 
 	long long minX = 0, maxX = 1000;
 
-	while (true) {
+	/*while (true) {
 		int x, y;
 		cin >> x >> y;
 		auto result = findSpace(opcode, x, y);
 		cout << result.first << " " << result.second << endl;
-	}
-	/*for(int x = 670; x < 687; ++x)
+	}*/
+	for(int x = 680; x < 687; ++x)
 		for (int y = 930; y < 941; ++y) {
 			auto result = findSpace(opcode, x, y);
 			cout << "with " << x << " " << y << ": " << result.first << " " << result.second << endl;
 		}
-		*/
+		
 
-		while (true) {
+		/*while (true) {
 			int x, y;
 			cin >> x >> y;
 			auto result = isPulling(opcode, x, y);
 			cout << result << endl;
-		}
+		}*/
 	system("pause");
 	bool found = false;
 	int testX;
@@ -213,5 +213,7 @@ int day19_2() {
 
 // 2: 6890943 too high;
 // 2: 6870941 too high;
+
+//2: 6840397
 
 // 2: 6810932 too low;
